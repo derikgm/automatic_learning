@@ -1,0 +1,18 @@
+from openpyxl import load_workbook 
+
+def leer():
+    workbook = load_workbook(ruta, data_only = True)
+
+    sheet = workbook.active
+
+    data = []
+
+    for row in sheet.iter_rows():
+        row_data = [cell.value for cell in row]
+        data.append(row_data)
+    
+    return data
+#################END FUNCTION#################
+
+#Esta es otra function lo que es mas complicada de trabajar
+#es usando otra libreria
